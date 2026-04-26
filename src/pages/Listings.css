@@ -1,0 +1,46 @@
+.listings-page { background: var(--gray-50); }
+.listings-topbar { background: white; border-bottom: 1px solid var(--gray-200); padding: 14px 0; position: sticky; top: 64px; z-index: 50; }
+.topbar-search { max-width: 800px; }
+.listings-layout { display: grid; grid-template-columns: 280px 1fr; gap: 2rem; padding: 2rem 1.5rem; align-items: start; }
+.listings-sidebar { position: sticky; top: 140px; display: flex; flex-direction: column; gap: 1rem; }
+.sidebar-card { background: white; border-radius: var(--r-lg); border: 1px solid var(--gray-200); padding: 1.25rem; }
+.sidebar-title { font-size: 16px; font-weight: 700; color: var(--navy); margin-bottom: 1.25rem; padding-bottom: 10px; border-bottom: 1px solid var(--gray-100); }
+.filter-group { margin-bottom: 1.25rem; }
+.filter-label { font-size: 12px; font-weight: 700; color: var(--gray-500); text-transform: uppercase; letter-spacing: 0.06em; display: block; margin-bottom: 8px; }
+.filter-pills { display: flex; gap: 6px; flex-wrap: wrap; }
+.filter-pill {
+  padding: 6px 12px; font-size: 12px; font-weight: 500;
+  border: 1.5px solid var(--gray-200); border-radius: 20px;
+  background: white; color: var(--gray-600); transition: all 0.15s;
+  font-family: inherit;
+}
+.filter-pill.active, .filter-pill:hover { border-color: var(--blue); background: #dbeafe; color: var(--blue); }
+.filter-checks { display: flex; flex-direction: column; gap: 8px; }
+.check-item { display: flex; align-items: center; gap: 8px; cursor: pointer; font-size: 13px; color: var(--gray-700); }
+.check-item input { accent-color: var(--blue); width: 15px; height: 15px; }
+.trust-info-card { background: linear-gradient(135deg, #f0f7ff, #e8f3fe); border-color: #bfdbfe; }
+.trust-info-icon { font-size: 24px; margin-bottom: 8px; }
+.trust-info-card h4 { font-size: 14px; font-weight: 700; color: var(--navy); margin-bottom: 10px; }
+.trust-info-card ul { list-style: none; display: flex; flex-direction: column; gap: 6px; }
+.trust-info-card li { font-size: 12px; color: var(--gray-600); }
+
+/* MAIN */
+.listings-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 1.25rem; gap: 1rem; flex-wrap: wrap; }
+.listings-count { font-size: 14px; color: var(--gray-600); }
+.listings-count strong { color: var(--navy); font-weight: 700; }
+.listings-count em { font-style: normal; color: var(--blue); font-weight: 600; }
+.listings-sort { display: flex; align-items: center; gap: 8px; font-size: 13px; color: var(--gray-500); }
+.listings-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+  gap: 1.25rem;
+}
+.no-results { text-align: center; padding: 5rem 2rem; }
+.no-results-icon { font-size: 48px; margin-bottom: 1rem; }
+.no-results h3 { font-size: 20px; color: var(--navy); margin-bottom: 8px; }
+.no-results p { color: var(--gray-500); }
+
+@media (max-width: 900px) {
+  .listings-layout { grid-template-columns: 1fr; }
+  .listings-sidebar { position: static; }
+}
