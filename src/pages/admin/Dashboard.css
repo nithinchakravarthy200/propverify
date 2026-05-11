@@ -1,0 +1,46 @@
+.dashboard { max-width: 1100px; }
+.dash-loading { display: flex; align-items: center; justify-content: center; height: 300px; }
+.spinner-lg { width: 40px; height: 40px; border: 3px solid var(--gray-200); border-top-color: var(--blue); border-radius: 50%; animation: spin 0.8s linear infinite; }
+@keyframes spin { to { transform: rotate(360deg); } }
+.dash-welcome { margin-bottom: 2rem; }
+.dash-welcome h1 { font-family: 'Fraunces', serif; font-size: 28px; font-weight: 600; color: var(--navy); margin-bottom: 4px; }
+.dash-welcome p { color: var(--gray-500); font-size: 15px; }
+.stat-cards { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; margin-bottom: 2rem; }
+.stat-card { background: white; border-radius: var(--r-lg); padding: 1.5rem; border: 1px solid var(--gray-200); position: relative; overflow: hidden; }
+.stat-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: var(--card-color); }
+.stat-card-icon { font-size: 28px; margin-bottom: 12px; }
+.stat-card-val { font-family: 'Fraunces', serif; font-size: 32px; font-weight: 700; color: var(--navy); margin-bottom: 4px; }
+.stat-card-label { font-size: 13px; color: var(--gray-500); }
+.dash-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 2rem; }
+.dash-card { background: white; border-radius: var(--r-lg); border: 1px solid var(--gray-200); padding: 1.5rem; }
+.dash-card-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 1.25rem; }
+.dash-card-header h3 { font-size: 16px; font-weight: 600; color: var(--navy); }
+.dash-link { font-size: 13px; color: var(--blue); font-weight: 500; }
+.dash-empty { text-align: center; padding: 2rem; color: var(--gray-400); font-size: 14px; }
+.dash-empty a { color: var(--blue); }
+.inquiry-list { display: flex; flex-direction: column; gap: 10px; }
+.inquiry-row { display: flex; align-items: center; gap: 12px; padding: 10px; background: var(--gray-50); border-radius: var(--r); }
+.inq-avatar { width: 36px; height: 36px; border-radius: 50%; background: var(--blue); color: white; font-weight: 700; font-size: 14px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.inq-info { flex: 1; min-width: 0; }
+.inq-name { font-size: 14px; font-weight: 600; color: var(--gray-800); }
+.inq-prop { font-size: 12px; color: var(--gray-500); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.inq-meta { text-align: right; }
+.inq-status { font-size: 10px; font-weight: 700; padding: 2px 8px; border-radius: 20px; text-transform: uppercase; letter-spacing: 0.05em; display: inline-block; margin-bottom: 3px; }
+.status-new { background: #dbeafe; color: var(--blue); }
+.status-contacted { background: #dcfce7; color: var(--green); }
+.status-closed { background: var(--gray-100); color: var(--gray-500); }
+.inq-phone { font-size: 11px; color: var(--gray-500); }
+.top-props-list { display: flex; flex-direction: column; gap: 10px; }
+.top-prop-row { display: flex; align-items: center; gap: 12px; padding: 10px; background: var(--gray-50); border-radius: var(--r); }
+.top-prop-rank { font-family: 'Fraunces', serif; font-size: 20px; font-weight: 700; color: var(--amber); min-width: 30px; }
+.top-prop-info { flex: 1; min-width: 0; }
+.top-prop-title { font-size: 14px; font-weight: 600; color: var(--gray-800); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.top-prop-city { font-size: 12px; color: var(--gray-500); }
+.top-prop-views { font-size: 13px; color: var(--gray-500); font-weight: 500; white-space: nowrap; }
+.dash-actions { display: flex; gap: 12px; flex-wrap: wrap; }
+@media (max-width: 900px) { .stat-cards { grid-template-columns: 1fr 1fr; } .dash-grid { grid-template-columns: 1fr; } }
+@media (max-width: 480px) { .stat-cards { grid-template-columns: 1fr 1fr; } }
+
+.inq-phone-small { font-size: 11px; color: var(--gray-400); margin-top: 1px; }
+.inq-time { font-size: 11px; color: var(--gray-400); margin-top: 3px; }
+.views-pill { background: #ede9fe; color: #7c3aed; font-size: 12px; font-weight: 600; padding: 2px 8px; border-radius: 12px; white-space: nowrap; }
